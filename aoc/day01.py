@@ -4,9 +4,6 @@ from aoc import cache
 
 
 class Solution:
-    def __init__(self):
-        self.logger.setLevel(INFO)
-
     def run(self) -> int:
         previous = None
         result = 0
