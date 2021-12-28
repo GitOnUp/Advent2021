@@ -46,7 +46,7 @@ class InputFile(metaclass=Logged):
     def lines(self) -> Iterable[str]:
         with open(self.path, 'r') as f:
             for line in f:
-                yield line
+                yield line.strip()
 
 
 __all__ = [
