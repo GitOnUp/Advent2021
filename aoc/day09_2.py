@@ -1,9 +1,4 @@
-from aoc.day09_1 import Grid
-
-
-class MutableGrid(Grid):
-    def set(self, x: int, y: int, value: int) -> None:
-        self.lines[y][x] = value
+from aoc.grid import MutableGrid
 
 
 def flood_fill(grid: MutableGrid, x: int, y: int) -> int:
@@ -24,7 +19,7 @@ def flood_fill(grid: MutableGrid, x: int, y: int) -> int:
 
 
 def solve() -> int:
-    grid = MutableGrid.parse()
+    grid = MutableGrid.parse(9)
     basin_sizes = []
     for x, y in grid.iterate_coordinates():
         current = grid.at(x, y)
